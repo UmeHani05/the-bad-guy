@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://rkbtduo8i6ok"]
+
+[ext_resource type="AudioStream" uid="uid://bthgvshlbdhns" path="res://Hide and seek (instrumental).mp3" id="1_thuu5"]
+
+[node name="GlobalAudio" type="AudioStreamPlayer"]
+stream = ExtResource("1_thuu5")
+autoplay = true
+bus = &"Music"

@@ -1,0 +1,140 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwjlv5sr3bfhk"]
+
+[ext_resource type="Script" uid="uid://bw45jvd3p02jl" path="res://main_menu.gd" id="1_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://uhye14tvgix6" path="res://download.png" id="2_wu84c"]
+[ext_resource type="FontFile" uid="uid://c6fsh253ssm1p" path="res://Mitshuka_PERSONAL_USE_ONLY.otf" id="3_8ln24"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bqqt6")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_wu84c")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 55
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.59876275, 0, 0.016522372, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 75
+text = "Hide& 
+Seek"
+vertical_alignment = 1
+
+[node name="NewGame" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 30
+text = "New Game"
+flat = true
+alignment = 2
+
+[node name="Continue" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 30
+text = "Continue     "
+flat = true
+alignment = 2
+
+[node name="Settings" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 30
+text = "Settings      "
+flat = true
+alignment = 2
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 30
+text = "Quit                 "
+flat = true
+alignment = 2
+
+[node name="SettingsPopup" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.46100003
+anchor_top = 0.34600002
+anchor_right = 0.721
+anchor_bottom = 0.73200005
+offset_left = -0.072021484
+offset_top = 0.2919922
+offset_right = 0.40795898
+offset_bottom = 0.16397095
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsPopup"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="SettingsLabel" type="Label" parent="SettingsPopup/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 20
+text = "Settings"
+horizontal_alignment = 1
+
+[node name="MusicLabel" type="Label" parent="SettingsPopup/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 18
+text = "Sound"
+horizontal_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="SettingsPopup/VBoxContainer"]
+custom_minimum_size = Vector2(90, 40)
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+value = 1.0
+ticks_position = 3
+
+[node name="CloseButton" type="Button" parent="SettingsPopup/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ln24")
+text = "Close"
+flat = true
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="value_changed" from="SettingsPopup/VBoxContainer/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="SettingsPopup/VBoxContainer/CloseButton" to="." method="_on_close_button_pressed"]
