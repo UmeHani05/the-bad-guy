@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://c6fsh253ssm1p"
-path="res://.godot/imported/Mitshuka_PERSONAL_USE_ONLY.otf-7ff1b24a6406fc44726968f827484c31.fontdata"
+uid="uid://dyc2ed4b12iut"
+path="res://.godot/imported/Mitshuka_PERSONAL_USE_ONLY.otf-cf82d6f2ed64f3d1da097478514bf71a.fontdata"
 
 [deps]
 
-source_file="res://Mitshuka_PERSONAL_USE_ONLY.otf"
-dest_files=["res://.godot/imported/Mitshuka_PERSONAL_USE_ONLY.otf-7ff1b24a6406fc44726968f827484c31.fontdata"]
+source_file="res://assets/fonts/Mitshuka_PERSONAL_USE_ONLY.otf"
+dest_files=["res://.godot/imported/Mitshuka_PERSONAL_USE_ONLY.otf-cf82d6f2ed64f3d1da097478514bf71a.fontdata"]
 
 [params]
 

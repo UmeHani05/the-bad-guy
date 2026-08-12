@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://cwjlv5sr3bfhk"]
 
-[ext_resource type="Script" uid="uid://bw45jvd3p02jl" path="res://main_menu.gd" id="1_bqqt6"]
-[ext_resource type="Texture2D" uid="uid://uhye14tvgix6" path="res://download.png" id="2_wu84c"]
-[ext_resource type="FontFile" uid="uid://c6fsh253ssm1p" path="res://Mitshuka_PERSONAL_USE_ONLY.otf" id="3_8ln24"]
+[ext_resource type="Script" uid="uid://k3h6gxdu6i37" path="res://scripts/main_menu.gd" id="1_wu84c"]
+[ext_resource type="Texture2D" uid="uid://ds685uhty2n0a" path="res://assets/backgrounds/download.png" id="2_bqqt6"]
+[ext_resource type="FontFile" uid="uid://dyc2ed4b12iut" path="res://assets/fonts/Mitshuka_PERSONAL_USE_ONLY.otf" id="3_rtw2f"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -11,7 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_bqqt6")
+script = ExtResource("1_wu84c")
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
@@ -21,7 +21,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("2_wu84c")
+texture = ExtResource("2_bqqt6")
 expand_mode = 1
 stretch_mode = 6
 
@@ -48,7 +48,7 @@ alignment = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0.59876275, 0, 0.016522372, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
-theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_fonts/font = ExtResource("3_rtw2f")
 theme_override_font_sizes/font_size = 75
 text = "Hide& 
 Seek"
@@ -56,7 +56,7 @@ vertical_alignment = 1
 
 [node name="NewGame" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_fonts/font = ExtResource("3_rtw2f")
 theme_override_font_sizes/font_size = 30
 text = "New Game"
 flat = true
@@ -64,7 +64,7 @@ alignment = 2
 
 [node name="Continue" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_fonts/font = ExtResource("3_rtw2f")
 theme_override_font_sizes/font_size = 30
 text = "Continue     "
 flat = true
@@ -72,7 +72,7 @@ alignment = 2
 
 [node name="Settings" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_fonts/font = ExtResource("3_rtw2f")
 theme_override_font_sizes/font_size = 30
 text = "Settings      "
 flat = true
@@ -80,7 +80,7 @@ alignment = 2
 
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_fonts/font = ExtResource("3_rtw2f")
 theme_override_font_sizes/font_size = 30
 text = "Quit                 "
 flat = true
@@ -109,14 +109,14 @@ alignment = 1
 
 [node name="SettingsLabel" type="Label" parent="SettingsPopup/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_fonts/font = ExtResource("3_rtw2f")
 theme_override_font_sizes/font_size = 20
 text = "Settings"
 horizontal_alignment = 1
 
 [node name="MusicLabel" type="Label" parent="SettingsPopup/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_fonts/font = ExtResource("3_rtw2f")
 theme_override_font_sizes/font_size = 18
 text = "Sound"
 horizontal_alignment = 1
@@ -131,7 +131,7 @@ ticks_position = 3
 
 [node name="CloseButton" type="Button" parent="SettingsPopup/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_fonts/font = ExtResource("3_rtw2f")
 text = "Close"
 flat = true
 
